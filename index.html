@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <audio autoplay id="audio">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">I love you 💗</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Cảm ơn cậu đã chọn tớ 😚. I LOVE YOU</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Box  -->
+    <div id="box">
+        <p>Cậu đồng ý làm người yêu của tớ nhé?</p>
+        <div>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-success" onclick="playAudio()">Tớ đồng ý 😍</button>
+        <button type="button" class="btn btn-outline-danger" onclick="changeBtn()">Ghét, ko yêu 😤</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
