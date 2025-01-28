@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .countdown {
+            text-align: center;
+        }
+        .large-number {
+            font-size: 100px;
+            font-weight: bold;
+            position: relative;
+        }
+        .large-number::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 4px solid black;
+        }
+        .small-number {
+            font-size: 30px;
+            font-weight: 100;
+            color: #888;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <div id="large-number" class="large-number">300</div>
+        <div id="small-number" class="small-number">300</div>
+    </div>
+
+    <script>
+        let countdownValue = 300;
+
+        function updateCountdown() {
+            if (countdownValue >= 0) {
+                document.getElementById('large-number').innerText = countdownValue;
+                document.getElementById('small-number').innerText = countdownValue;
+                countdownValue--;
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
